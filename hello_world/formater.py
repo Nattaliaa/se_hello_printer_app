@@ -8,6 +8,10 @@ SUPPORTED = [PLAIN, PLAIN_UP, PLAIN_LO, JSON]
 
 
 def get_formatted(msg, imie, format):
+    """
+
+    :type message: object
+    """
     result = ""
     if format == PLAIN:
         result = plain_text(msg, imie)
@@ -21,7 +25,7 @@ def get_formatted(msg, imie, format):
 
 
 def format_to_json(msg, imie):
-    return ('{ "imie":"' + imie + '", "mgs":' +
+    return ('{ "imie":"' + imie + '", "msg":' +
             msg + '"}')
 
 
